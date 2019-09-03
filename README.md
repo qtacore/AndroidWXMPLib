@@ -12,7 +12,7 @@
 ## 安装
 
 ```
-$ pip install wxmplib -i http://pypi.dq.oa.com/simple --trusted-host=pypi.dq.oa.com
+$ pip install wxmplib
 ```
 
 ## demo示例
