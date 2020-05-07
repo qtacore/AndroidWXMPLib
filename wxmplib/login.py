@@ -99,3 +99,22 @@ class ReLoginPanel(LoginPanel):
         '''
         self.Controls['密码'].text = account.password
         self.Controls['登录'].click()
+
+
+class ExtDeviceLoginPanel(Window):
+    '''其它设备登录
+    '''
+    Activity = 'com.tencent.mm.plugin.webwx.ui.ExtDeviceWXLoginUI'
+
+    def __init__(self, app):
+        super(ExtDeviceLoginPanel, self).__init__(app)
+        self.update_locator({
+            '登录': {
+                'type': Button,
+                'root': self,
+                'locator': QPath('/Text="登录"')
+            }
+        })
+    
+    def login(self):
+        self.Controls['登录'].click()
